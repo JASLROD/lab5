@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Grades
+comment0.text=\r\n\ Program\ Description\r\n\ 1)\ Fill\ in\ steps\r\n\ \r\n\ @author\ Name,\ optional\ email\r\n\ @version\ v1.0\r\n\ @since\ 3/11/2025\r\n
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=
+comment2.target=java.lang.String\ getInFile()
+comment2.text=\r\n\ Uses\ JOptionPane\ to\ get\ and\ return\ input\ file\ name\r\n\ @return\ name\ of\ file\ from\ JOptionPane\ \ //NOTE\ -\ Description\ only\ for\ return\r\n
+comment3.params=
+comment3.target=java.lang.String\ getOutFile()
+comment3.text=\r\n\ <Put\ description\ here-see\ above\ as\ example>\r\n\ <@return\ -\ see\ above\ as\ example>\r\n
+comment4.params=inInFile\ inOutFile
+comment4.target=void\ processFile(java.lang.String,\ java.lang.String)
+comment4.text=\r\n\ <Put\ description\ in\ here\ for\ processFile\ method.\ \ NOTE\ can\ be\ several\ lines\ if\ necessary\r\n\ <Need\ to\ create\ two\ @param\ entry\ lines>\r\n
+numComments=5
