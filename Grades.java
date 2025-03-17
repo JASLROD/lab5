@@ -5,9 +5,12 @@ import java.io.*;
 
 /**
  * Program Description
- * 1) Fill in steps
+ * This program reads a file containing students grades.
+ * Using JOptionPane the user will input and output the files.
+ * Another method will process the grades using while loop and if esle. 
+ * Once files are processed the program with show the location of where the new file is.
  * 
- * @author Name, optional email
+ * Jasmin Leonrodriguez, jleonrodriquez@student.sdccd.edu
  * @version v1.0
  * @since 3/11/2025
  */
@@ -37,9 +40,12 @@ public class Grades{
         return temp;//return String var from above
     }//end getInFile()
     /**
-     * <Put description here-see above as example>
-     * <@return - see above as example>
+     * Prompts the user to enter the name of the output file using a dialog box 
+     * and returns the filename as a string.
+     *
+     * @return The name of the output file entered by the user.
      */
+
     private static String getOutFile(){
         String temp;
         temp = JOptionPane.showInputDialog("Enter the name of the output file (ie output.txt): ");
@@ -50,9 +56,21 @@ public class Grades{
     //can be a simple return with a JOptionPane Input Dialog 
 
     /**
-     * <Put description in here for processFile method.  NOTE can be several lines if necessary
-     * <Need to create two @param entry lines>
-     */    
+     * Reads a file containing student grades, processes the grades to determine statistics, 
+     * and writes the results to an output file.
+     *
+     * The method:
+     * - Reads student grades from an input file.
+     * - Processes grades by categorizing them into letter grades (A, B, C, D, F).
+     * - Determines the highest and lowest scores.
+     * - Calculates the average score.
+     * - Writes the statistics to an output file.
+     * - Processes multiple sets of grades (each set ending with -1).
+     *
+     * @param inInFile  The name of the input file containing student grades.
+     * @param inOutFile The name of the output file where results will be written.
+     * @throws IOException If an error occurs while reading or writing the file.
+     */ 
     public static void processFile(String inInFile, String inOutFile) throws IOException{ //create a void processFile method with 2 String parameters.  Since working with File, will need throws IOException
         //variables
         int number; //to assign from Scanner input
@@ -84,35 +102,35 @@ public class Grades{
                 if(number>=90)
                     As++;
                 else if(number>=80)//else if (number>=?)
-                Bs++;//increment Bs
+                    Bs++;//increment Bs
                 else if(number>=70)//account for all letter grades
-                Cs++;
+                    Cs++;
                 else if(number>=60)
-                Ds++;
+                    Ds++;
                 else
-                Fs++;
+                    Fs++;
                 number = input.nextInt();//need to read in the next number using Scanner object with .nextInt().  You are in a while pit to process each grade for each line
             }//end while
 
             output.println("Set " + set + " of grades calculated");//Write to the PrintWriter object (ie outStream) like you would to the screen
             set++; // increment set so the next number is 2
             if(count==0)//if to determine whether a line with -1 only, if so, count is still 0
-            output.println("No grades to average.\n");//print to PrintWriter object, No grades to average
+                output.println("No grades to average.\n");//print to PrintWriter object, No grades to average
             else{
-            output.println("Number of As: "+ As);//print to PrintWriter object, Number of As: along with the value in the As accumulator
-            output.println("Number of Bs: "+ Bs);//repeat above for Bs, Cs,Ds, and Fs
-            output.println("Number of Cs: "+ Cs);
-            output.println("Number of Ds: "+ Ds);
-            output.println("Number of Fs: "+ Fs);
-            output.println("The high score was: "+ max);//print to PrintWriter object, The high score was: along with the value in max
-            output.println("The low score was: "+ min);//repeat above but for min
-            avg=(double)total/count;//compute avg. NOTE-Both total and count are integers.  You will need to cast here (double).
-            output.printf("The avg score is: %.1f\n\n",avg);//print to PrintWriter object, The avg score is: nicely formatted to 1 decimal place
-        }//end else
-    }//end while for each line
-    System.out.println("Grade processing is completed");//message out to the console screen (System.out.println("Grade processing is completed");
-    System.out.println("You can retrieve the output file at, "+ inOutFile); //Perhaps a message out to console screen, You can retrieve the output file at, <output file location>
-    input.close();//close the inStream and outStream using the .close() for each
-    output.close();
-}//end processFile()
+                output.println("Number of As: "+ As);//print to PrintWriter object, Number of As: along with the value in the As accumulator
+                output.println("Number of Bs: "+ Bs);//repeat above for Bs, Cs,Ds, and Fs
+                output.println("Number of Cs: "+ Cs);
+                output.println("Number of Ds: "+ Ds);
+                output.println("Number of Fs: "+ Fs);
+                output.println("The high score was: "+ max);//print to PrintWriter object, The high score was: along with the value in max
+                output.println("The low score was: "+ min);//repeat above but for min
+                avg=(double)total/count;//compute avg. NOTE-Both total and count are integers.  You will need to cast here (double).
+                output.printf("The avg score is: %.1f\n\n",avg);//print to PrintWriter object, The avg score is: nicely formatted to 1 decimal place
+            }//end else
+        }//end while for each line
+        System.out.println("Grade processing is completed");//message out to the console screen (System.out.println("Grade processing is completed");
+        System.out.println("You can retrieve the output file at, "+ inOutFile); //Perhaps a message out to console screen, You can retrieve the output file at, <output file location>
+        input.close();//close the inStream and outStream using the .close() for each
+        output.close();
+    }//end processFile()
 }//end Grades class
