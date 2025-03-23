@@ -9,9 +9,9 @@ import java.util.Scanner;
  * Has a playagain feature that ignores case.
  *  
  * 
- * Jasmin Leonrodriguez jleonrodriquez@student.sdccd.edu
- * @version v1.0
- * @since 3/11/2025
+ * @author Jasmin Leonrodriguez jleonrodriquez@student.sdccd.edu
+ * @version v1.1
+ * @since 3/22/2025
  */
 public class Prime{ 
     public static void main (String[] args) {

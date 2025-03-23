@@ -10,9 +10,9 @@ import java.io.*;
  * Another method will process the grades using while loop and if esle. 
  * Once files are processed the program with show the location of where the new file is.
  * 
- * Jasmin Leonrodriguez, jleonrodriquez@student.sdccd.edu
- * @version v1.0
- * @since 3/11/2025
+ * @author Jasmin Leonrodriguez, jleonrodriquez@student.sdccd.edu
+ * @version v1.1
+ * @since 3/22/2025
  */
 public class Grades{ 
     public static void main (String[] args) throws IOException{  //look how small main() is when we divide and conquer into (resusable) methods!  Only 4 lines!!!

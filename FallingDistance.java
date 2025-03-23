@@ -1,12 +1,14 @@
 import java.util.Scanner;
 
 /**
- * Program Description
- * 1) Fill in steps
+ * This program will compute the distance of an objects fall under Earth's gravity.
+ * The user will enter a number of seconds using a scanner input.
+ * It will then calculate and display the falling distance.
+ * it will use the getDistance method to calculate.
  * 
- * Jasmin Leonrodriguez Jleonrodriquez@student.sdccd.edu
- * @version v1.0
- * @since 3/16/2025
+ * @author Jasmin Leonrodriguez Jleonrodriquez@student.sdccd.edu
+ * @version v1.1
+ * @since 3/22/2025
  */
 
 public class FallingDistance{ 
